@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alumni Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Helvetica', Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #555;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    /* Add divider styles */
+    .section-divider {
+      border-bottom: 2px solid #007bff;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      margin-left: 1px;
+    }
+
+    /* Style the posts list with bullets and emojis */
+    .posts-list {
+      padding-left: 20px;
+    }
+
+    .posts-list li::before {
+      content: "▶️";
+      margin-right: 10px;
+    }
+
+    /* Style the events list with bullets and date icons */
+    .events-list {
+      padding-left: 20px;
+    }
+
+    .events-list li::before {
+      content: "📅";
+      margin-right: 10px;
+    }
+    .post {
+  display: flex;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.post-text {
+  margin-top: 5px;
+}
+
+.likes-comments {
+  margin-top: 10px;
+  color: #777;
+}
+/* ... previous CSS styles ... */
+
+.like-button {
+  background: none;
+  border: none;
+  color: #0077B5;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.like-button i {
+  margin-right: 5px;
+}
+
+.user-comment {
+  margin-top: 10px;
+  color: #333;
+  font-style: italic;
+}
+/* ... previous CSS styles ... */
+
+.comment-input {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.comment-input input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.comment-input button {
+  margin-left: 10px;
+}
+
+.user-comment {
+  margin-top: 10px;
+  color: #333;
+  font-style: italic;
+}
+/* ... previous CSS styles ... */
+
+.post-description {
+  margin-top: 5px;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.post{
+  margin: top 5px; ;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.sidebar {
+  flex: 0 0 200px;
+  margin-right: 20px;
+}
+
+.posts-container {
+  flex: 1;
+}
+
+/* Style for the "Welcome, Divya" section */
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+
+  </style>
+  </head>
+<body>
+
+  <!-- Posts Section -->
+  <!--<div class="section-divider">
+    <h2>Posts</h2>
+    <ul class="posts-list">
+      <li>
+        <img src="path/to/image1.jpg" alt="Post Image 1" width="100">
+        Studying for my finals!
+      </li>
+      <li>
+        <img src="path/to/image2.jpg" alt="Post Image 2" width="100">
+        Excited about the upcoming hackathon!
+      </li>
+      <li>
+        <img src="path/to/image3.jpg" alt="Post Image 3" width="100">
+        Participated in a charity event.
+      </li>
+      <li>
+        <img src="path/to/image4.jpg" alt="Post Image 4" width="100">
+        Learning new JavaScript frameworks.
+      </li>
+    </ul>
+  </div>-->
+  <div class="main-container">
+    <div class="sidebar">
+      <h2>Welcome, Kameshwari</h2>
+      <div class="connect-with-student">
+        <p>connect-with-student</p>
+      </div>
+        <!-- Events Section -->
+        <pre>
+
+        </pre>
+  <div class=>
+    <h2>Events</h2>
+    <ul class="events-list">
+      <li>Missing the college days! 🎓</li>
+    <li>Working at amazon🚀</li>
+    <li>Volunteering at the alumni meet. 🤝</li>
+    <li>Looking forward to the reunion! 🎉</li>
+  </ul>
+     
+  </div>
+</body>
+    </div>
+     
+  <div class="post">
+    <img class="profile-picture" src="alprof.png" alt="Profile Picture" width="50%">
+    <div class="post-content">
+      <h3 class="user-name">Kameshwari</h3>
+      <p class="post-description">Do attend the session guys!!Great experience though</p>
+      <img class="post-image" src="post1.png" alt="Post Image" width="50%">
+      <div class="likes-comments">
+        <button class="like-button" onclick="handleLike()">
+          <i class="fa fa-thumbs-up"></i> <span class="likes-count">100</span> Likes
+        </button>
+        <button class="comment-button" onclick="toggleCommentInput()">Comment</button>
+      </div>
+      <div class="comment-input" style="display: none;">
+        <input type="text" placeholder="Enter your comment..." id="user-comment-input">
+        <button onclick="submitComment()">Submit</button>
+      </div>
+      <div class="user-comment" style="display: none;"></div>
+    </div>
+  </div>
+  </div>
+  
+  
+<script>
+  let likesCount = 100;
+
+function handleLike() {
+  likesCount++;
+  updateLikesCount();
+}
+
+function updateLikesCount() {
+  const likesCountElement = document.querySelector('.likes-count');
+  likesCountElement.textContent = likesCount;
+}
+
+function toggleCommentInput() {
+  const commentInput = document.querySelector('.comment-input');
+  const userCommentElement = document.querySelector('.user-comment');
+
+  if (commentInput.style.display === 'none') {
+    commentInput.style.display = 'block';
+    userCommentElement.style.display = 'none';
+  } else {
+    commentInput.style.display = 'none';
+    userCommentElement.style.display = 'block';
+  }
+}
+
+function submitComment() {
+  const userCommentInput = document.getElementById('user-comment-input');
+  const userComment = userCommentInput.value.trim();
+
+  if (userComment !== '') {
+    const userCommentElement = document.querySelector('.user-comment');
+    userCommentElement.textContent = userComment;
+    userCommentInput.value = '';
+
+    toggleCommentInput();
+  }
+}
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="minilogin.css">
+  <style>
+    .x{
+      color:darkblue;
+      text-align: center;
+    }
+    .y{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <label for="user-id">User ID:</label>
+        <!--<input type="text" id="user-id" name="user-id" required>-->
+        <input type="text" id="user-id" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <a href="forgotpsd.html" class="forgot-password">Forgot Password?</a>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Login" class="btn-submit">
+      </div>
+    </form>
+  </div>
+  <a class="x" href="miniregister.html"><p>Don't have an account?Sign Up</p></a>
+</body>
+</html>

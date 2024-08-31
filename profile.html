@@ -1,0 +1,143 @@
+<!--final upto profile display-->
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<form id="profile-form">
+  <div class="container">
+    <h2>Profile</h2>
+    
+      <div class="form-group">
+        <label for="profile-image">Profile Image</label>
+        <input type="file" id="profile-image" name="profile-image">
+      </div>
+      <div class="form-group">
+        <label for="preview-image">Preview</label>
+        <img id="preview-image" alt="Profile Preview" />
+      </div>
+    
+      <div class="form-group"> 
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="form-group"> 
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="graduation-year">Graduation Year:</label>
+        <input type="text" id="graduation-year" name="graduation-year" required>
+      </div>
+    
+    
+      <div class="form-group"><label for="occupation">Current Occupation:</label>
+      <input type="text" id="occupation" name="occupation">
+      </div>
+      <div class="form-group"><label for="bio">Bio:</label>
+        <textarea id="bio" name="bio"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Create Profile">
+      </div>
+  </div>
+</body>
+  </form>-->
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <style>
+      body{
+        background-image: url("p12.png");
+      }
+      .container{
+        background-image: url("p12.png");
+      }
+    </style>
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Profile</h2>
+      <form id="profileForm">
+        <div class="form-group">
+          <label for="profile-image">Profile Image</label>
+          <input type="file" id="profile-image" name="profile-image">
+        </div>
+        <pre>
+
+        </pre>
+        <div class="form-group">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required>
+        </div>
+        <pre>
+
+        </pre>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <pre>
+
+        </pre>
+        <div class="form-group">
+          <label for="graduation-year">Graduation Year:</label>
+          <input type="text" id="graduation-year" name="graduation-year" required>
+        </div>
+        <pre>
+
+        </pre>
+        <div class="form-group">
+          <label for="occupation">Current Occupation:</label>
+          <input type="text" id="occupation" name="occupation">
+        </div>
+        <pre>
+
+        </pre>
+        <div class="form-group">
+          <label for="bio">Bio:</label>
+          <textarea id="bio" name="bio"></textarea>
+        </div>
+        <pre>
+
+        </pre>
+        <div class="form-group">
+          <label>Profile Type:</label>
+          <input type="radio" id="student" name="profileType" value="student">
+          <label for="student">Student</label>
+          <input type="radio" id="alumni" name="profileType" value="alumni">
+          <label for="alumni">Alumni</label>
+        </div>
+        <pre>
+
+        </pre>
+        <div class="form-group">
+          <input type="submit" value="Create Profile">
+        </div>
+      </form>
+    </div>
+  
+    <script>
+      document.getElementById("profileForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+  
+        const formData = new FormData(event.target);
+        const profileType = formData.get("profileType");
+  
+        if (profileType === "student") {
+          window.location.href = "student.html"; // Redirect to student.html
+        } else if (profileType === "alumni") {
+          window.location.href = "alumni.html"; // Redirect to alumni.html
+        } else {
+          // Handle case where no profile type is selected
+          alert("Please select a profile type (Student or Alumni).");
+        }
+      });
+    </script>
+  </body>
+  </html>
+  
